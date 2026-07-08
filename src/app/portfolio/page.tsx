@@ -71,7 +71,7 @@ export default function PortfolioPage() {
                     <span className="text-xs text-[#404040]">Image Placeholder</span>
                   </div>
                 </div>
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-black/20 to-transparent p-5 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-black/20 to-transparent p-5 opacity-100 md:opacity-0 transition-opacity duration-150 md:group-hover:opacity-100">
                   <div>
                     <h3 className="text-lg font-bold text-white">{project.title}</h3>
                     <span className="text-sm text-[#dc2626]">{project.category}</span>

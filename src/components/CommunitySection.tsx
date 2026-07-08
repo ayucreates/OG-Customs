@@ -4,13 +4,13 @@ export default function CommunitySection() {
   return (
     <section className="w-full bg-[#1a1a1a] border-y border-[#2a2a2a] py-20">
       <div className="mx-auto max-w-7xl px-6 text-center">
-        <div className="flex justify-center gap-12 mb-10">
+        <div className="flex justify-center gap-8 md:gap-12 mb-10">
           <div>
-            <p className="text-[2.5rem] font-bold font-sans text-[#dc2626] leading-none">10K+</p>
+            <p className="text-3xl md:text-[2.5rem] font-bold font-sans text-[#dc2626] leading-none">10K+</p>
             <p className="mt-1 text-sm text-[#a3a3a3]">Followers</p>
           </div>
           <div>
-            <p className="text-[2.5rem] font-bold font-sans text-[#dc2626] leading-none">5K+</p>
+            <p className="text-3xl md:text-[2.5rem] font-bold font-sans text-[#dc2626] leading-none">5K+</p>
             <p className="mt-1 text-sm text-[#a3a3a3]">Community</p>
           </div>
         </div>

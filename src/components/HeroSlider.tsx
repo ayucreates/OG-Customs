@@ -52,8 +52,8 @@ export default function HeroSlider() {
   }, [next])
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[600px] bg-[#0a0a0a] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent z-10" />
+    <section className="relative w-full h-[90vh] min-h-[500px] md:min-h-[600px] bg-[#0a0a0a] overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/95 to-[#0a0a0a]/60 md:via-[#0a0a0a]/90 md:to-transparent z-10" />
 
       <div className="absolute inset-0 flex items-center">
         <div className="w-full h-full flex">{beforeAfterSVG}</div>
