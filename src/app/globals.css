@@ -26,7 +26,7 @@
   --color-border: var(--border);
   --color-ring: var(--ring);
   --font-sans: "Exo 2", "Exo 2 Fallback", Arial, sans-serif;
-  --font-mono: "Geist Mono", monospace;
+  --font-mono: monospace;
 }
 
 html {
