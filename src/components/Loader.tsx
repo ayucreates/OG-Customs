@@ -6,8 +6,26 @@ export default function Loader() {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(false), 800)
-    return () => clearTimeout(timer)
+    let cancelled = false
+    const fallback = setTimeout(() => { cancelled = true; setIsVisible(false) }, 5000)
+
+    function onLoad() {
+      if (cancelled) return
+      clearTimeout(fallback)
+      setTimeout(() => setIsVisible(false), 400)
+    }
+
+    if (document.readyState === 'complete') {
+      onLoad()
+    } else {
+      window.addEventListener('load', onLoad)
+    }
+
+    return () => {
+      cancelled = true
+      clearTimeout(fallback)
+      window.removeEventListener('load', onLoad)
+    }
   }, [])
 
   if (!isVisible) return null

@@ -5,16 +5,19 @@ import CursorEffect from "@/components/CursorEffect"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppButton from "@/components/WhatsAppButton"
+import ErrorBoundary from "@/components/ErrorBoundary"
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Loader />
-      <CursorEffect />
-      <Header />
-      <main className="min-h-screen pt-16">{children}</main>
-      <Footer />
-      <WhatsAppButton />
+      <ErrorBoundary>
+        <CursorEffect />
+        <Header />
+        <main className="min-h-screen pt-16">{children}</main>
+        <Footer />
+        <WhatsAppButton />
+      </ErrorBoundary>
     </>
   )
 }
