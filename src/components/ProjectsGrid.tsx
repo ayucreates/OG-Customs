@@ -31,7 +31,7 @@ export default function ProjectsGrid() {
           Latest <span className="text-[#dc2626]">Projects</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {projects.map((p, i) => {
             const [c1, c2] = placeholderGradient(i)
             return (
