@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: og-customs
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run render-start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        value: file:./prisma/dev.db
+      - key: JWT_SECRET
+        generateValue: true
